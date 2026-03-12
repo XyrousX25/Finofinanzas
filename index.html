@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinoFinanzas | Domina tu Negocio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { brand: { dark: '#0f172a', light: '#1e293b', accent: '#10b981', accentHover: '#059669' } }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-brand-dark text-white antialiased selection:bg-brand-accent selection:text-white">
+
+    <nav class="fixed w-full z-50 glass border-b-0">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-extrabold tracking-tighter">
+                <i class="fa-solid fa-chart-line text-brand-accent mr-2"></i>Fino<span class="text-brand-accent">Finanzas</span>
+            </div>
+            <a href="https://wa.me/524427117629?text=Hola,%20me%20interesa%20la%20app%20de%20finanzas" target="_blank" class="bg-brand-accent hover:bg-brand-accentHover text-white px-6 py-2 rounded-full font-semibold transition-all shadow-glow flex items-center">
+                <i class="fa-brands fa-whatsapp text-xl mr-2"></i> Info por Whats
+            </a>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-20 px-6 min-h-screen flex flex-col justify-center items-center relative overflow-hidden">
+        <div class="absolute top-20 left-1/2 -translate-x-1/2 w-96 h-96 bg-brand-accent rounded-full blur-[120px] opacity-20 pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-4xl mx-auto text-center reveal">
+            <div class="inline-block bg-brand-light border border-gray-700 rounded-full px-4 py-1 text-sm text-gray-300 mb-6 shadow-lg">
+                <i class="fa-solid fa-fire text-orange-500 mr-2"></i> Únete a los fundadores de la versión Beta
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+                Deja de adivinar tus números. <br>
+                <span class="text-gradient">No es cuánto vendes, es cuánto te queda.</span>
+            </h1>
+            <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+                Olvídate de las libretas, el Excel y el estrés. El software definitivo para tener tus finanzas claras, tomar el control de cada peso y asegurar tus ganancias, <strong class="text-white">sin ser un experto en contabilidad.</strong>
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://wa.me/524427117629?text=Hola,%20me%20interesa%20la%20app%20de%20finanzas" target="_blank" class="bg-brand-accent hover:bg-brand-accentHover text-white text-lg font-bold px-8 py-4 rounded-xl shadow-glow transition-transform transform hover:-translate-y-1 flex items-center justify-center">
+                    <i class="fa-brands fa-whatsapp text-2xl mr-3"></i> Pedir Acceso - $349
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-brand-light relative reveal">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">Mira la App <span class="text-gradient">en Acción</span></h2>
+            <p class="text-gray-400 mb-10 text-lg">Un vistazo rápido a cómo FinanzasPro organiza tu dinero en minutos.</p>
+            
+            <div class="relative rounded-2xl overflow-hidden shadow-[0_0_40px_rgba(16,185,129,0.2)] border border-gray-700 bg-black group cursor-pointer" onclick="openModal('Finanza 2026-03-11 21-20-00.mp4', 'video')">
+                <video class="w-full h-auto opacity-80 group-hover:opacity-100 transition-opacity duration-500" autoplay muted loop playsinline>
+                    <source src="sera.mp4" type="video/mp4">
+                    Tu navegador no soporta videos.
+                </video>
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-20 h-20 bg-brand-accent/80 rounded-full flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-play text-white text-3xl ml-1"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 reveal">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">Interfaz <span class="text-gradient">Premium</span></h2>
+            <p class="text-gray-400 mb-12 text-lg">Fácil de usar, sin menús complicados. Lo que necesitas, a un clic.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass p-2 rounded-xl cursor-pointer transform hover:scale-105 transition duration-300" onclick="openModal('inicio.png', 'image')">
+                    <img src="inicio.png" alt="Dashboard" class="w-full rounded-lg border border-gray-700 hover:border-brand-accent transition-colors" onerror="this.src='https://via.placeholder.com/600x400/1e293b/10b981?text=Dashboard+Principal'">
+                </div>
+                <div class="glass p-2 rounded-xl cursor-pointer transform hover:scale-105 transition duration-300" onclick="openModal('ingresos.png', 'image')">
+                    <img src="ingresos.png" alt="Calculadora" class="w-full rounded-lg border border-gray-700 hover:border-brand-accent transition-colors" onerror="this.src='https://via.placeholder.com/600x400/1e293b/10b981?text=Calculadora+Delivery'">
+                </div>
+                <div class="glass p-2 rounded-xl cursor-pointer transform hover:scale-105 transition duration-300" onclick="openModal('gastos.png', 'image')">
+                    <img src="gastos.png" alt="Corte de Caja" class="w-full rounded-lg border border-gray-700 hover:border-brand-accent transition-colors" onerror="this.src='https://via.placeholder.com/600x400/1e293b/10b981?text=Corte+de+Caja'">
+                </div>
+                <div class="glass p-2 rounded-xl cursor-pointer transform hover:scale-105 transition duration-300" onclick="openModal('limites.png', 'image')">
+                    <img src="limites.png" alt="Inventario" class="w-full rounded-lg border border-gray-700 hover:border-brand-accent transition-colors" onerror="this.src='https://via.placeholder.com/600x400/1e293b/10b981?text=Gestión+de+Inventario'">
+                </div>
+                <div class="glass p-2 rounded-xl cursor-pointer transform hover:scale-105 transition duration-300" onclick="openModal('ahorros.png', 'image')">
+                    <img src="ahorros.png" alt="Gastos" class="w-full rounded-lg border border-gray-700 hover:border-brand-accent transition-colors" onerror="this.src='https://via.placeholder.com/600x400/1e293b/10b981?text=Control+de+Gastos'">
+                </div>
+                <div class="glass p-2 rounded-xl cursor-pointer transform hover:scale-105 transition duration-300" onclick="openModal('gral.png', 'image')">
+                    <img src="gral.png" alt="Reportes SAT" class="w-full rounded-lg border border-gray-700 hover:border-brand-accent transition-colors" onerror="this.src='https://via.placeholder.com/600x400/1e293b/10b981?text=Apartados+para+el+SAT'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-brand-light relative reveal">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Preguntas <span class="text-gradient">Frecuentes</span></h2>
+            <div class="space-y-6">
+                <div class="glass p-6 rounded-2xl border border-gray-700">
+                    <h4 class="text-xl font-bold text-white mb-2"><i class="fa-solid fa-circle-question text-brand-accent mr-2"></i> ¿Es un solo pago o es mensualidad?</h4>
+                    <p class="text-gray-400">Por estar en la fase Beta, es un **único pago de $249**. Tendrás acceso de por vida y obten descuentos y mejoras gratuitas cuando la version oficial salga .</p>
+                </div>
+                <div class="glass p-6 rounded-2xl border border-gray-700">
+                    <h4 class="text-xl font-bold text-white mb-2"><i class="fa-solid fa-laptop text-brand-accent mr-2"></i> ¿En qué equipos funciona?</h4>
+                    <p class="text-gray-400">Esta versión Beta está diseñada para computadoras con Windows (PC). Es ideal para tenerla en tu caja o revisarla al llegar a casa.</p>
+                </div>
+                <div class="glass p-6 rounded-2xl border border-gray-700">
+                    <h4 class="text-xl font-bold text-white mb-2"><i class="fa-solid fa-shield-halved text-brand-accent mr-2"></i> ¿Cómo es el proceso de compra?</h4>
+                    <p class="text-gray-400">Me mandas un WhatsApp, te resuelvo cualquier duda, te paso el link de Pago (o CLABE) y en cuanto confirmes, te mando el instalador directo a tu chat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 relative reveal">
+        <div class="max-w-md mx-auto glass p-10 rounded-3xl border border-brand-accent/30 shadow-glow relative text-center">
+            <div class="absolute top-0 right-0 bg-brand-accent text-white text-xs font-bold px-4 py-1 rounded-bl-lg rounded-tr-3xl">🔥 Licencia Vitalicia</div>
+            <h3 class="text-2xl font-bold mb-2">Fundador (PC Beta)</h3>
+            <div class="text-5xl font-black text-white mb-2">$349 <span class="text-lg text-gray-500 line-through">$649</span></div>
+            <p class="text-gray-400 mb-8">Escríbeme por WhatsApp, resolvemos dudas y te paso el link de pago.</p>
+            
+            <a href="https://wa.me/524427117629?text=Hola,%20me%20interesa%20la%20app%20de%20finanzas" target="_blank" class="block w-full bg-[#25D366] hover:bg-[#128C7E] text-white text-xl font-bold py-4 rounded-xl shadow-lg transition-all flex justify-center items-center">
+                <i class="fa-brands fa-whatsapp text-2xl mr-2"></i> Mandar WhatsApp
+            </a>
+            <p class="text-xs text-gray-500 mt-4"><i class="fa-solid fa-bolt mr-1"></i> Respuesta rápida en menos de 10 min.</p>
+        </div>
+    </section>
+
+    <div id="mediaModal" class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md hidden flex justify-center items-center p-4 opacity-0 transition-opacity duration-300">
+        <button onclick="closeModal()" class="absolute top-6 right-6 text-white text-4xl hover:text-brand-accent transition-colors">&times;</button>
+        <div id="modalContent" class="max-w-5xl w-full max-h-[90vh] flex justify-center items-center"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
