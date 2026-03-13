@@ -1,54 +1,75 @@
-/* Importar tipografía por si falla el HTML */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
 
-body {
-    font-family: 'Poppins', sans-serif;
+* { box-sizing: border-box; }
+
+body { font-family: 'DM Sans', sans-serif; background: #0a0f1e; }
+
+/* NAV */
+.glass-nav {
+    background: rgba(10, 15, 30, 0.8);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-/* Efecto de cristal premium */
-.glass {
-    background: rgba(30, 41, 59, 0.6);
+/* GLASS CARDS */
+.glass-card {
+    background: rgba(17, 24, 39, 0.6);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Degradados para textos perrones */
+/* GRADIENTS */
 .text-gradient {
     background: linear-gradient(135deg, #34d399 0%, #059669 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.text-gradient-purple {
+    background: linear-gradient(135deg, #a78bfa 0%, #6C63FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-/* Sombra neón para botones */
-.shadow-glow {
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
-}
+/* GLOW */
+.shadow-glow { box-shadow: 0 0 20px rgba(16,185,129,0.3); }
+.shadow-glow:hover { box-shadow: 0 0 35px rgba(16,185,129,0.5); }
 
-.shadow-glow:hover {
-    box-shadow: 0 0 30px rgba(16, 185, 129, 0.6);
-}
-
-/* Animaciones de entrada al hacer Scroll (Más fluidas) */
+/* REVEAL ANIMATIONS */
 .reveal {
     opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); /* Curva suave tipo Apple */
+    transform: translateY(32px);
+    transition: all 0.9s cubic-bezier(0.4, 0, 0, 1);
 }
-
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Ocultar barra de scroll en el modal */
-::-webkit-scrollbar {
-    width: 8px;
+/* FEATURE CARDS */
+.feature-card {
+    transition: all 0.3s ease;
 }
-::-webkit-scrollbar-track {
-    background: #0f172a;
+.feature-card:hover {
+    transform: translateY(-4px);
+    background: rgba(17, 24, 39, 0.9);
 }
-::-webkit-scrollbar-thumb {
-    background: #10b981;
-    border-radius: 4px;
+
+/* ROADMAP */
+.roadmap-item {
+    transition: all 0.2s ease;
 }
+.roadmap-item:hover {
+    transform: translateX(4px);
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0a0f1e; }
+::-webkit-scrollbar-thumb { background: #10b981; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #059669; }
+
+/* FONT DISPLAY */
+.font-display { font-family: 'Syne', sans-serif; }
